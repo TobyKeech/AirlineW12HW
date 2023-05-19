@@ -56,7 +56,8 @@ public class TestFlight {
 
     @Test
     public void checkForSeats(){
-        assertEquals("Seats on this plane", flight.seatsOnPlane());
+        flight.seatsOnPlane(passenger1);
+        assertEquals(1, flight.noOfPassengers());
     }
 
 

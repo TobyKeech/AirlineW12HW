@@ -42,11 +42,10 @@ public class Flight {
        this.crewMembers.add(cabinCrewMember);
     }
 
-    public String seatsOnPlane() {
+    public void seatsOnPlane(Passenger passenger) {
         if(plane.getCapacity() > bookedPassengers.size()){
-            return "Seats on this plane";
+            bookedPassengers.add(passenger);
         }
-        return "No seats";
     }
 
 
