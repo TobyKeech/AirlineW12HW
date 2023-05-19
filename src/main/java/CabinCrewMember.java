@@ -10,7 +10,7 @@ public class CabinCrewMember {
     }
 
     public String relayMessage(){
-        return "Here is a message";
+        return "Hello, we are going to the moon today, it is made of cheese.";
     }
 }
 

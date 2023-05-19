@@ -26,4 +26,21 @@ public class Flight {
        this.time=time;
    }
 
+    public int noOfPassengers(){
+        return this.bookedPassengers.size();
+    }
+
+    public int noOfCrew(){
+       return this.crewMembers.size();
+    }
+
+    public void addPass(Passenger passenger){
+    this.bookedPassengers.add(passenger);
+    }
+
+    public void addCrew(CabinCrewMember cabinCrewMember){
+       this.crewMembers.add(cabinCrewMember);
+    }
+
+
 }

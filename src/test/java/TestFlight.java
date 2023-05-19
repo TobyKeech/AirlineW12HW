@@ -16,11 +16,11 @@ public class TestFlight {
 
     Flight flight;
 
-    Plane plane;
+    Plane hercules;
 
     @Before
     public void setUp(){
-        flight = new Flight(pilot,cabinCrewMembers,bookedPassengers,plane, "BA712717", "Moon"
+        flight = new Flight(pilot,cabinCrewMembers,bookedPassengers,Plane.HERCULES, "BA712717", "Moon"
         ,"Darkside of Moon", "12/5/2030");
         pilot = new Pilot( Rank.CAPTIAN,"BG434343", "Keith");
 
