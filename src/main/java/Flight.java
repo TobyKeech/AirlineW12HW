@@ -42,7 +42,11 @@ public class Flight {
        this.crewMembers.add(cabinCrewMember);
     }
 
-    public void seatsOnPlane(Passenger passenger) {
+    public int noOfSeats(){
+       return plane.getCapacity() - bookedPassengers.size();
+    }
+
+    public void canAddOnPlane(Passenger passenger) {
         if(plane.getCapacity() > bookedPassengers.size()){
             bookedPassengers.add(passenger);
         }

@@ -62,18 +62,26 @@ public class TestFlight {
 
     @Test
     public void checkWontAddIfNoSeats(){
-        flight1.seatsOnPlane(passenger1);
-        flight1.seatsOnPlane(passenger2);
-        flight1.seatsOnPlane(passenger3);
+        flight1.canAddOnPlane(passenger1);
+        flight1.canAddOnPlane(passenger2);
+        flight1.canAddOnPlane(passenger3);
         assertEquals(2, flight1.noOfPassengers());
     }
 
     @Test
     public void checkForSeats(){
-        flight2.seatsOnPlane(passenger1);
-        flight2.seatsOnPlane(passenger2);
-        flight2.seatsOnPlane(passenger3);
+        flight2.canAddOnPlane(passenger1);
+        flight2.canAddOnPlane(passenger2);
+        flight2.canAddOnPlane(passenger3);
         assertEquals(3, flight2.noOfPassengers());
+    }
+
+    @Test
+    public void checkAvaliableSeats(){
+        flight2.canAddOnPlane(passenger1);
+        flight2.canAddOnPlane(passenger2);
+        flight2.canAddOnPlane(passenger3);
+        assertEquals(197, flight2.noOfSeats());
     }
 
 
