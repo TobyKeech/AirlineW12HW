@@ -2,7 +2,7 @@ public enum Plane {
 
     F22RAPTOR(100, 10000),
     HERCULES(200, 2000),
-    BLACKBIRD(4, 50);
+    BLACKBIRD(2, 50);
     private Integer capacity;
     private Integer weight;
 
