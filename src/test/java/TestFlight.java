@@ -1,6 +1,9 @@
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 public class TestFlight {
     Pilot pilot;
@@ -34,6 +37,26 @@ public class TestFlight {
         passenger1 = new Passenger("Toby", 1);
         passenger2 = new Passenger("James", 2);
 
+    }
+
+    @Test
+    public void canAddPassengerToFlight(){
+        flight.addPass(passenger1);
+        flight.addPass(passenger2);
+        assertEquals(2, flight.noOfPassengers());
+    }
+
+    @Test
+    public void canAddCabinCrewToFlight(){
+        flight.addCrew(cabinCrewMember1);
+        flight.addCrew(cabinCrewMember2);
+        flight.addCrew(cabinCrewMember3);
+        assertEquals(3,flight.noOfCrew());
+    }
+
+    @Test
+    public void checkForSeats(){
+        assertEquals("Seats on this plane", flight.seatsOnPlane());
     }
 
 

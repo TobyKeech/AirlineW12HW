@@ -16,7 +16,7 @@ public class Flight {
 
    public Flight(Pilot pilot, ArrayList<CabinCrewMember>crewMembers, ArrayList<Passenger>bookedPassengers,
                  Plane plane, String flightNumber,String destination,String airport,String time){
-       this.pilot =pilot;
+       this.pilot=pilot;
        this.crewMembers = new ArrayList<>();
        this.bookedPassengers = new ArrayList<>();
        this.plane=plane;
@@ -41,6 +41,14 @@ public class Flight {
     public void addCrew(CabinCrewMember cabinCrewMember){
        this.crewMembers.add(cabinCrewMember);
     }
+
+    public String seatsOnPlane() {
+        if(plane.getCapacity() > bookedPassengers.size()){
+            return "Seats on this plane";
+        }
+        return "No seats";
+    }
+
 
 
 }
