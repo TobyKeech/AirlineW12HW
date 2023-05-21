@@ -13,7 +13,11 @@ public class Pilot {
     }
 
     public String getLicenceNo() {
-        return licenceNo;
+        return this.licenceNo;
+    }
+
+    public void setLicenceNo(String licenceNo) {
+        this.licenceNo = licenceNo;
     }
 
     public String flyPlane(){

@@ -21,7 +21,6 @@ public class TestFlight {
     Flight flight1;
     Flight flight2;
 
-    Plane hercules;
 
     @Before
     public void setUp(){
