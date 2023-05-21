@@ -1,3 +1,5 @@
+import com.sun.org.apache.bcel.internal.generic.ARETURN;
+
 import java.util.ArrayList;
 
 public class FlightManager extends Flight {
@@ -20,6 +22,11 @@ public class FlightManager extends Flight {
          return baggaeWeightPerPassanger(plane) * flight.noOfPassengers();
 
     }
+
+    public int weightRemaining(Plane plane, Flight flight){
+        return planeWeightForBags(plane) - weightBookedByPassangers(plane, flight);
+    }
+
 
 }
 

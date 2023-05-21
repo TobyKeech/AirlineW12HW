@@ -56,4 +56,9 @@ public class TestFlightManager {
     public void testWeightBookedByPassangers(){
         assertEquals(15, flightManager.weightBookedByPassangers(Plane.HERCULES, flightManager));
     }
+
+    @Test
+    public void testWeightRemaining(){
+        assertEquals(985, flightManager.weightRemaining(Plane.HERCULES, flightManager));
+    }
 }
